@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vihaan Mehta</title>
+<meta name="description" content="Things I have built, won and worked on.">
+<style>
+  :root {
+    --paper: #f4efe6;
+    --ink: #1f1b16;
+    --soft: #6b6358;
+    --rule: #cfc6b6;
+    --mark: #a8321f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #1b1814; --ink: #ece5d8; --soft: #9a9181; --rule: #3a342b; --mark: #e0775f; }
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 17px; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    line-height: 1.55;
+  }
+  a { color: inherit; text-decoration-color: var(--mark); text-underline-offset: 3px; }
+  a:hover { color: var(--mark); }
+  .wrap { max-width: 52rem; margin: 0 auto; padding: 3.5rem 1rem 5rem; }
+  header { margin-bottom: 3.5rem; }
+  h1 { font-size: 2.6rem; font-weight: normal; margin: 0 0 .4rem; letter-spacing: -.01em; }
+  .lede { max-width: 34rem; margin: 0; color: var(--soft); }
+  .note { font-size: .85rem; color: var(--soft); margin-top: 1.2rem; font-style: italic; }
+
+  section { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0 2rem; border-top: 1px solid var(--rule); padding: 1.6rem 0 1.4rem; }
+  section > h2 {
+    font: .78rem/1.4 "Courier New", Courier, monospace;
+    text-transform: uppercase; letter-spacing: .08em; color: var(--soft); margin: .35rem 0 0; font-weight: normal;
+  }
+  .item { margin: 0 0 1.5rem; }
+  .item:last-child { margin-bottom: 0; }
+  .item h3 { font-size: 1.1rem; margin: 0; font-weight: bold; }
+  .item h3 .tag { font: .75rem "Courier New", monospace; color: var(--mark); margin-left: .5rem; font-weight: normal; letter-spacing: .03em; }
+  .item p { margin: .3rem 0 0; }
+  ul.plain { margin: .35rem 0 0; padding-left: 1.1rem; }
+  ul.plain li { margin: .15rem 0; }
+  ul.plain li::marker { color: var(--mark); }
+
+  table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: .3rem 0; border-bottom: 1px dotted var(--rule); font-weight: normal; }
+  th { color: var(--soft); font: .78rem "Courier New", monospace; text-transform: uppercase; letter-spacing: .06em; }
+  td:last-child, th:last-child { text-align: right; }
+
+  .years { width: 100%; }
+  .years td:first-child { width: 3.5rem; color: var(--soft); font-family: "Courier New", monospace; font-size: .9rem; vertical-align: top; }
+  .years td:last-child { text-align: left; }
+
+  footer { border-top: 1px solid var(--rule); padding-top: 1rem; font-size: .85rem; color: var(--soft); }
+
+  @media (max-width: 40rem) {
+    html { font-size: 16px; }
+    h1 { font-size: 2.1rem; }
+    section { grid-template-columns: 1fr; }
+    section > h2 { margin-bottom: .8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Vihaan Mehta</h1>
+  <p class="lede">Eighth grade, San Jose. I build things (software, small hardware, a couple of businesses), compete in math and Taekwondo, and solve puzzles that are shaped wrong on purpose.</p>
+  <p class="note">Working draft. Last updated October 18, 2026.</p>
+</header>
+
+<section>
+  <h2>Building now</h2>
+  <div>
+    <div class="item">
+      <h3>Busscript <span class="tag">Oct 2026</span></h3>
+      <p>A CAN bus analyzer in the style of Vector CANalyzer, with a built-in MCP server so an AI assistant can read a bus too. Python core, React interface, its own small scripting language, and import for MF4, ASC, BLF, candump, TRC and CSV recordings. Ships as a single Windows .exe with a native window. Not yet tested on real CAN hardware.</p>
+    </div>
+    <div class="item">
+      <h3>Snack Cabinet Lock <span class="tag">Sep 2026</span></h3>
+      <p>A cabinet that opens when I tap my phone on it. A custom Android app on my Galaxy S22 answers a Raspberry Pi's RC522 reader with a rotating six-digit code. The common library for that reader only handles part of the protocol, so the Pi-side code speaks the rest directly. Phone-to-reader unlock works end to end; the cabinet itself is still being wired.</p>
+    </div>
+    <div class="item">
+      <h3>VoltForge</h3>
+      <p>A 3D design and simulation tool for electric bikes. You assemble a bike on screen and it checks that the parts fit together and estimates how fast a given rider would go.</p>
+    </div>
+    <div class="item">
+      <h3>Science fair 2027 <span class="tag">in planning</span></h3>
+      <p>A tremor-cancelling spoon for people with essential tremor, tested on a motorized tremor rig instead of on people. Early application due November 2.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Past projects</h2>
+  <div>
+    <div class="item">
+      <h3>Real-Time ASL Translator</h3>
+      <p>Computer vision that turns American Sign Language into speech, about 2,200 words, with a reverse mode that plays animated signing. Third place at the Synopsys Science Fair and the IEEE Electrotechnology Award.</p>
+    </div>
+    <div class="item">
+      <h3>Emergency Drone Communication System</h3>
+      <p>A Bluetooth Low Energy app, built in MIT App Inventor, that lets disaster victims send their needs and location to first responders through a drone. Messages arrive in under two seconds. Third place at the Synopsys Science Fair.</p>
+    </div>
+    <div class="item">
+      <h3>EduAI</h3>
+      <p>An AI tutoring app I wrote in 7th grade.</p>
+    </div>
+    <div class="item">
+      <h3>The Effect of Video Games on an Adolescent Brain</h3>
+      <p>A literature-based case study covering brain development, motivation, emotion regulation and game addiction, drawn from cited peer-reviewed papers.</p>
+    </div>
+    <div class="item">
+      <h3>ARC Rocketry</h3>
+      <p>Rocket design and construction, launch preparation, and the recovery team.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Businesses</h2>
+  <div>
+    <div class="item">
+      <h3>Custom dog tags</h3>
+      <p>Co-founded with my older sister: CNC-engraved tags, over $100 in revenue. We spent the profit on the red and blue sparring helmets my Taekwondo teammates needed at Nationals, which kept the team from being disqualified.</p>
+    </div>
+    <div class="item">
+      <h3>3D printing</h3>
+      <p>Designed, printed and sold gadgets and toys. Over $200 in revenue, with orders, schedules and inventory to keep straight alongside school.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Taekwondo</h2>
+  <div>
+    <p style="margin-top:0">First-degree black belt. Training since summer 2019 at Exceed Martial Arts Center. More than 50 competitions.</p>
+    <table class="years">
+      <tr><td>2026</td><td>California State bronze. Bronze at AAU qualifiers. AAU National qualifier overall.</td></tr>
+      <tr><td>2025</td><td>California State bronze. Regional bronze (sparring). AAU National qualifier. 5th at Nationals in both poomsae and sparring.</td></tr>
+      <tr><td>2024</td><td>California State champion. Regional silver (sparring). AAU National qualifier. 5th at Nationals (poomsae).</td></tr>
+      <tr><td>2023</td><td>California State bronze. Regional bronze (sparring). AAU National qualifier. 5th at Nationals (poomsae).</td></tr>
+      <tr><td>2022</td><td>California State bronze. AAU National qualifier, bronze at the national qualifiers.</td></tr>
+    </table>
+    <p>Every year also brought ten or more local gold medals. On Saturdays I help teach the four to six year olds: demonstrating forms, running drills, keeping them going.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Math</h2>
+  <ul class="plain" style="margin-top:0">
+    <li>Math Olympiad throughout middle school.</li>
+    <li>Noetic Learning Math Contest: honorable mention twice in 6th grade, honor roll in 7th.</li>
+    <li>School representative at the MathCounts chapter competition.</li>
+    <li>Top scorer in the school math club (ASMA), and consistent perfect scores on MathCounts Showcase.</li>
+    <li>Taking Geometry in 8th grade.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Cubing</h2>
+  <div>
+    <p style="margin-top:0">Five official WCA competitions. Can solve 2x2 through 5x5, Square-1, Megaminx, Pyraminx, Skewb, Clock, Mirror cube, one-handed and 3x3 blindfolded.</p>
+    <table>
+      <tr><th>Event</th><th>Single</th><th>Average</th></tr>
+      <tr><td>2x2</td><td>4.04</td><td>5.70</td></tr>
+      <tr><td>Pyraminx</td><td>9.56</td><td>11.10</td></tr>
+      <tr><td>3x3</td><td>10.13</td><td>13.59</td></tr>
+      <tr><td>Clock</td><td>16.56</td><td>20.05</td></tr>
+      <tr><td>Skewb</td><td>18.50</td><td>25.36</td></tr>
+      <tr><td>One-handed</td><td>29.61</td><td>35.55</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Code and languages</h2>
+  <div>
+    <p style="margin-top:0">Python, Lua, Luau, MIT App Inventor. Learning Java.</p>
+    <p>English, Mandarin (conversational, around Chinese II), Hindi (strong listening, conversational speaking).</p>
+  </div>
+</section>
+
+
+</div>
+</body>
+</html>
