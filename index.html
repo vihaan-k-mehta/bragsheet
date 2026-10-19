@@ -3,191 +3,238 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vihaan Mehta</title>
-<meta name="description" content="Things I have built, won and worked on.">
+<title>Portfolio of Vihaan Mehta</title>
+<meta name="description" content="Engineering projects, math, Taekwondo, business and speedcubing.">
 <style>
-  :root {
-    --paper: #f4efe6;
-    --ink: #1f1b16;
-    --soft: #6b6358;
-    --rule: #cfc6b6;
-    --mark: #a8321f;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --paper: #1b1814; --ink: #ece5d8; --soft: #9a9181; --rule: #3a342b; --mark: #e0775f; }
-  }
-  * { box-sizing: border-box; }
-  html { font-size: 17px; }
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
-    line-height: 1.55;
-  }
-  a { color: inherit; text-decoration-color: var(--mark); text-underline-offset: 3px; }
-  a:hover { color: var(--mark); }
-  .wrap { max-width: 52rem; margin: 0 auto; padding: 3.5rem 1rem 5rem; }
-  header { margin-bottom: 3.5rem; }
-  h1 { font-size: 2.6rem; font-weight: normal; margin: 0 0 .4rem; letter-spacing: -.01em; }
-  .lede { max-width: 34rem; margin: 0; color: var(--soft); }
-  .note { font-size: .85rem; color: var(--soft); margin-top: 1.2rem; font-style: italic; }
-
-  section { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0 2rem; border-top: 1px solid var(--rule); padding: 1.6rem 0 1.4rem; }
-  section > h2 {
-    font: .78rem/1.4 "Courier New", Courier, monospace;
-    text-transform: uppercase; letter-spacing: .08em; color: var(--soft); margin: .35rem 0 0; font-weight: normal;
-  }
-  .item { margin: 0 0 1.5rem; }
-  .item:last-child { margin-bottom: 0; }
-  .item h3 { font-size: 1.1rem; margin: 0; font-weight: bold; }
-  .item h3 .tag { font: .75rem "Courier New", monospace; color: var(--mark); margin-left: .5rem; font-weight: normal; letter-spacing: .03em; }
-  .item p { margin: .3rem 0 0; }
-  ul.plain { margin: .35rem 0 0; padding-left: 1.1rem; }
-  ul.plain li { margin: .15rem 0; }
-  ul.plain li::marker { color: var(--mark); }
-
-  table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
-  th, td { text-align: left; padding: .3rem 0; border-bottom: 1px dotted var(--rule); font-weight: normal; }
-  th { color: var(--soft); font: .78rem "Courier New", monospace; text-transform: uppercase; letter-spacing: .06em; }
-  td:last-child, th:last-child { text-align: right; }
-
-  .years { width: 100%; }
-  .years td:first-child { width: 3.5rem; color: var(--soft); font-family: "Courier New", monospace; font-size: .9rem; vertical-align: top; }
-  .years td:last-child { text-align: left; }
-
-  footer { border-top: 1px solid var(--rule); padding-top: 1rem; font-size: .85rem; color: var(--soft); }
-
-  @media (max-width: 40rem) {
-    html { font-size: 16px; }
-    h1 { font-size: 2.1rem; }
-    section { grid-template-columns: 1fr; }
-    section > h2 { margin-bottom: .8rem; }
-  }
+:root{--bg:#efefef;--card:#fff;--fg:#1c1c1c;--muted:#6b6b6b;--line:#e4e4e4;--pill:#111;--pillfg:#fff;--chip:#ececec}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--card:#1d1d1d;--fg:#ececec;--muted:#9a9a9a;--line:#333;--pill:#ececec;--pillfg:#111;--chip:#2a2a2a;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+.page{max-width:76rem;margin:0 auto;padding:1.5rem 1rem;display:grid;grid-template-columns:19rem minmax(0,1fr);gap:1.5rem;align-items:start}
+.side{display:flex;flex-direction:column;gap:1.25rem}
+.card{background:var(--card);border-radius:.75rem;padding:1.25rem;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.card h2{font-size:1.05rem;font-weight:500;margin:0 0 .9rem}
+.profile{text-align:center}
+.avatar{width:6.5rem;height:6.5rem;border-radius:50%;border:3px solid var(--fg);margin:0 auto .9rem;display:flex;align-items:center;justify-content:center;font-size:2.2rem;font-weight:600;background:var(--chip)}
+.profile h1{font-size:1.5rem;margin:0 0 .5rem;color:var(--muted);font-weight:600}
+.tag{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85rem;margin:0}
+.pills{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center}
+.pill{background:var(--pill);color:var(--pillfg);border-radius:999px;padding:.1rem .65rem;font-size:.75rem;font-weight:500}
+.timeline{list-style:none;margin:0;padding:0 0 0 1rem;border-left:2px solid var(--line);display:flex;flex-direction:column;gap:1rem}
+.timeline li{font-size:.8rem;color:var(--muted)}
+.timeline b{display:block;color:var(--fg);font-weight:600}
+.main{background:var(--card);border-radius:.75rem;padding:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.08);min-width:0}
+.main>header{display:flex;align-items:center;gap:.9rem;margin-bottom:1.5rem}
+.icon{width:2.6rem;height:2.6rem;border-radius:.6rem;background:var(--chip);display:flex;align-items:center;justify-content:center;font-weight:700}
+.main>header h2{margin:0;font-size:1.05rem}
+.main>header p{margin:0;color:var(--muted);font-size:.85rem}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin-bottom:2rem}
+.proj{border:1px solid var(--line);border-radius:.75rem;padding:1.25rem;min-width:0}
+.proj h3{margin:0 0 .15rem;font-size:1.05rem;text-align:center}
+.proj .when{text-align:center;color:var(--muted);font-size:.8rem;margin:0 0 .8rem}
+.proj ul{margin:0 0 .8rem;padding-left:1.1rem;font-size:.88rem}
+.proj li{margin-bottom:.25rem}
+.stack{border-top:1px solid var(--line);padding-top:.7rem;font-size:.8rem;color:var(--muted);margin:0}
+.section-title{font-size:1.05rem;font-weight:600;margin:0 0 1rem}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin-bottom:2rem}
+th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:500;font-size:.8rem}
+.scroll{overflow-x:auto}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin-bottom:2rem}
+@media (max-width:60rem){.page{grid-template-columns:1fr}}
+@media (max-width:40rem){.grid,.cols{grid-template-columns:1fr}.main{padding:1rem}}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="page">
+<aside class="side">
+  <div class="card profile">
+    <div class="avatar" aria-hidden="true">VM</div>
+    <h1>Vihaan Mehta</h1>
+    <p class="tag">Builder, competitor, learner and mentor. 8th grader at Stratford San Jose.</p>
+    <p class="tag" style="margin-top:.8rem"><a href="https://github.com/vihaan-k-mehta">github.com/vihaan-k-mehta</a></p>
+  </div>
 
-<header>
-  <h1>Vihaan Mehta</h1>
-  <p class="lede">Eighth grade, San Jose. I build things (software, small hardware, a couple of businesses), compete in math and Taekwondo, and solve puzzles that are shaped wrong on purpose.</p>
-  <p class="note">Working draft. Last updated October 18, 2026.</p>
-</header>
-
-<section>
-  <h2>Building now</h2>
-  <div>
-    <div class="item">
-      <h3>Busscript <span class="tag">Oct 2026</span></h3>
-      <p>A CAN bus analyzer in the style of Vector CANalyzer, with a built-in MCP server so an AI assistant can read a bus too. Python core, React interface, its own small scripting language, and import for MF4, ASC, BLF, candump, TRC and CSV recordings. Ships as a single Windows .exe with a native window. Not yet tested on real CAN hardware.</p>
-    </div>
-    <div class="item">
-      <h3>Snack Cabinet Lock <span class="tag">Sep 2026</span></h3>
-      <p>A cabinet that opens when I tap my phone on it. A custom Android app on my Galaxy S22 answers a Raspberry Pi's RC522 reader with a rotating six-digit code. The common library for that reader only handles part of the protocol, so the Pi-side code speaks the rest directly. Phone-to-reader unlock works end to end; the cabinet itself is still being wired.</p>
-    </div>
-    <div class="item">
-      <h3>VoltForge</h3>
-      <p>A 3D design and simulation tool for electric bikes. You assemble a bike on screen and it checks that the parts fit together and estimates how fast a given rider would go.</p>
-    </div>
-    <div class="item">
-      <h3>Science fair 2027 <span class="tag">in planning</span></h3>
-      <p>A tremor-cancelling spoon for people with essential tremor, tested on a motorized tremor rig instead of on people. Early application due November 2.</p>
+  <div class="card">
+    <h2>Programming</h2>
+    <div class="pills">
+      <span class="pill">Python</span><span class="pill">Java (learning)</span><span class="pill">Lua</span><span class="pill">Luau</span><span class="pill">MIT App Inventor</span><span class="pill">React</span><span class="pill">Raspberry Pi</span><span class="pill">Computer vision</span>
     </div>
   </div>
-</section>
 
-<section>
-  <h2>Past projects</h2>
-  <div>
-    <div class="item">
+  <div class="card">
+    <h2>Recent work</h2>
+    <ul class="timeline">
+      <li>Oct 2026<b>Busscript packaged as a Windows .exe</b>Native WebView2 window, MCP quick start</li>
+      <li>Oct 2026<b>Busscript CAN bus analyzer</b>Landing page and download on GitHub</li>
+      <li>Sep 2026<b>Science fair 2027 research</b>Early SRC deadline Nov 2</li>
+      <li>Sep 2026<b>Snack Cabinet Lock display and controller</b>Runs as a service on boot</li>
+      <li>Sep 2026<b>Snack Cabinet Lock</b>Phone as keycard on a Pi</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Academics</h2>
+    <ul class="timeline">
+      <li>8th grade<b>Geometry</b>Possible Algebra 2 outside school</li>
+      <li>7th grade<b>6 A's and a few B's</b>Noetic Honor Roll</li>
+      <li>6th grade<b>Noetic Honorable Mention</b>Fall and Spring</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Languages</h2>
+    <ul class="timeline">
+      <li><b>English</b>Fluent</li>
+      <li><b>Mandarin Chinese</b>Conversational, about Chinese II</li>
+      <li><b>Hindi</b>Strong listening, conversational speaking</li>
+    </ul>
+  </div>
+</aside>
+
+<main class="main">
+  <header>
+    <div class="icon" aria-hidden="true">&#9638;</div>
+    <div><h2>My Projects</h2><p>Showcasing 9 projects</p></div>
+  </header>
+
+  <div class="grid">
+    <article class="proj">
       <h3>Real-Time ASL Translator</h3>
-      <p>Computer vision that turns American Sign Language into speech, about 2,200 words, with a reverse mode that plays animated signing. Third place at the Synopsys Science Fair and the IEEE Electrotechnology Award.</p>
-    </div>
-    <div class="item">
+      <p class="when">Synopsys Science Fair, 3rd place. IEEE Electrotechnology Award.</p>
+      <ul>
+        <li>Computer vision system that translates American Sign Language into spoken language.</li>
+        <li>Supports about 2,200 words.</li>
+        <li>Reverse translation with animated signing output.</li>
+      </ul>
+      <p class="stack">Python | Computer vision | Accessibility</p>
+    </article>
+    <article class="proj">
       <h3>Emergency Drone Communication System</h3>
-      <p>A Bluetooth Low Energy app, built in MIT App Inventor, that lets disaster victims send their needs and location to first responders through a drone. Messages arrive in under two seconds. Third place at the Synopsys Science Fair.</p>
-    </div>
-    <div class="item">
+      <p class="when">Synopsys Science Fair, 3rd place</p>
+      <ul>
+        <li>Bluetooth Low Energy system built with MIT App Inventor.</li>
+        <li>Victims send needs, location and emergency information to first responders.</li>
+        <li>Designed to run on drones; data transfer completes in under two seconds.</li>
+      </ul>
+      <p class="stack">MIT App Inventor | BLE | Drones</p>
+    </article>
+    <article class="proj">
+      <h3>Busscript</h3>
+      <p class="when">October 2026</p>
+      <ul>
+        <li>CAN bus analyzer in the style of Vector CANalyzer, with a scripting language and a REST and MCP server.</li>
+        <li>Imports MF4, ASC, BLF, candump, TRC and CSV recordings; OBD-II, UDS and J1939 diagnostics.</li>
+        <li>Packaged as a single 65 MB Windows .exe with a native WebView2 window and command-line mode.</li>
+      </ul>
+      <p class="stack">Python | React | MCP | WebView2</p>
+    </article>
+    <article class="proj">
+      <h3>Snack Cabinet Lock</h3>
+      <p class="when">September 2026</p>
+      <ul>
+        <li>Phone-as-keycard lock: a custom Android app (HCE + TOTP) on a Galaxy S22 talks to an RC522 reader, and the Pi verifies a rotating 6-digit code.</li>
+        <li>Found the RC522 chip supports ISO 14443-4 even though the common library does not.</li>
+        <li>3.5" display via a custom device-tree overlay, 12V latch, systemd service on boot.</li>
+      </ul>
+      <p class="stack">Raspberry Pi 3B | RC522 | Android | ILI9486 | systemd</p>
+    </article>
+    <article class="proj">
+      <h3>VoltForge</h3>
+      <p class="when">Current project</p>
+      <ul>
+        <li>3D electric-bike design and simulation platform: build a custom e-bike before buying parts.</li>
+        <li>Compatibility analysis, performance prediction, rider-specific speed estimates and component integration checks.</li>
+      </ul>
+      <p class="stack">3D visualization | Simulation | E-bikes</p>
+    </article>
+    <article class="proj">
+      <h3>Science Fair 2027</h3>
+      <p class="when">September 2026</p>
+      <ul>
+        <li>Researched three engineering proposals against the Synopsys rules and three years of winners.</li>
+        <li>Ranked them with the tremor-cancelling spoon first; wrote prior-art, parts and timeline research and oral Q&amp;A practice.</li>
+        <li>Early SRC submission due Nov 2, 2026.</li>
+      </ul>
+      <p class="stack">Research | Engineering design | Synopsys</p>
+    </article>
+    <article class="proj">
       <h3>EduAI</h3>
-      <p>An AI tutoring app I wrote in 7th grade.</p>
-    </div>
-    <div class="item">
-      <h3>The Effect of Video Games on an Adolescent Brain</h3>
-      <p>A literature-based case study covering brain development, motivation, emotion regulation and game addiction, drawn from cited peer-reviewed papers.</p>
-    </div>
-    <div class="item">
-      <h3>ARC Rocketry</h3>
-      <p>Rocket design and construction, launch preparation, and the recovery team.</p>
-    </div>
+      <p class="when">7th grade</p>
+      <ul>
+        <li>AI-powered educational app that helps students learn more effectively.</li>
+      </ul>
+      <p class="stack">AI | Education</p>
+    </article>
+    <article class="proj">
+      <h3>Video Games and the Adolescent Brain</h3>
+      <p class="when">Academic research</p>
+      <ul>
+        <li>Psychology and neuroscience case study on brain development, cognition, motivation, emotion regulation and game addiction.</li>
+        <li>Cited peer-reviewed literature and synthesized it into an evidence-based report.</li>
+      </ul>
+      <p class="stack">Neuroscience | Psychology | Research writing</p>
+    </article>
+    <article class="proj">
+      <h3>ARC Rocketry Competition</h3>
+      <p class="when">Rocketry team member</p>
+      <ul>
+        <li>Designed and built the rocket.</li>
+        <li>Helped with launch preparation and worked on the recovery team.</li>
+      </ul>
+      <p class="stack">Rocketry | Aerospace | Teamwork</p>
+    </article>
   </div>
-</section>
 
-<section>
-  <h2>Businesses</h2>
-  <div>
-    <div class="item">
-      <h3>Custom dog tags</h3>
-      <p>Co-founded with my older sister: CNC-engraved tags, over $100 in revenue. We spent the profit on the red and blue sparring helmets my Taekwondo teammates needed at Nationals, which kept the team from being disqualified.</p>
-    </div>
-    <div class="item">
-      <h3>3D printing</h3>
-      <p>Designed, printed and sold gadgets and toys. Over $200 in revenue, with orders, schedules and inventory to keep straight alongside school.</p>
-    </div>
+  <h3 class="section-title">Taekwondo</h3>
+  <p style="margin-top:0">1st Dan black belt. Training since summer 2019 at Exceed Martial Arts Center. 50+ competitions. Every Saturday, assists students ages 4 to 6 by demonstrating form and supporting instructors.</p>
+  <div class="scroll"><table>
+    <tr><th>Year</th><th>Results</th></tr>
+    <tr><td>2022</td><td>California State bronze; AAU National qualifier; bronze at National Qualifiers; 10+ local gold medals</td></tr>
+    <tr><td>2023</td><td>California State bronze; bronze at Regional Qualifiers (sparring); AAU National qualifier; 5th at Nationals (poomsae); 10+ local gold medals</td></tr>
+    <tr><td>2024</td><td>California State champion (gold); silver at Regional Qualifiers (sparring); AAU National qualifier; 5th at Nationals (poomsae); 15+ local gold medals</td></tr>
+    <tr><td>2025</td><td>California State bronze; bronze at Regional Qualifiers (sparring); AAU National qualifier; 5th at Nationals in poomsae and sparring; 10+ local gold medals</td></tr>
+    <tr><td>2026</td><td>California State bronze; bronze at AAU Qualifiers; AAU National qualifier</td></tr>
+  </table></div>
+
+  <div class="cols">
+    <section>
+      <h3 class="section-title">Math</h3>
+      <ul style="padding-left:1.1rem;margin:0;font-size:.9rem">
+        <li>Math Olympiad throughout middle school</li>
+        <li>Noetic Learning Math Contest: Honorable Mention (Fall and Spring, 6th), Honor Roll (7th)</li>
+        <li>School representative at MathCounts Chapter</li>
+        <li>Top scorer in the school math club (ASMA)</li>
+        <li>Consistent perfect scores on MathCounts Showcase</li>
+      </ul>
+    </section>
+    <section>
+      <h3 class="section-title">Business</h3>
+      <ul style="padding-left:1.1rem;margin:0;font-size:.9rem">
+        <li>Co-founded a CNC-engraved dog tag business with my sister. Over $100 in revenue, spent on the red and blue helmets my Taekwondo team needed at Nationals to avoid disqualification.</li>
+        <li>Designed, printed and sold 3D-printed gadgets and toys. Over $200 in revenue; managed orders, schedules and inventory.</li>
+      </ul>
+    </section>
   </div>
-</section>
 
-<section>
-  <h2>Taekwondo</h2>
-  <div>
-    <p style="margin-top:0">First-degree black belt. Training since summer 2019 at Exceed Martial Arts Center. More than 50 competitions.</p>
-    <table class="years">
-      <tr><td>2026</td><td>California State bronze. Bronze at AAU qualifiers. AAU National qualifier overall.</td></tr>
-      <tr><td>2025</td><td>California State bronze. Regional bronze (sparring). AAU National qualifier. 5th at Nationals in both poomsae and sparring.</td></tr>
-      <tr><td>2024</td><td>California State champion. Regional silver (sparring). AAU National qualifier. 5th at Nationals (poomsae).</td></tr>
-      <tr><td>2023</td><td>California State bronze. Regional bronze (sparring). AAU National qualifier. 5th at Nationals (poomsae).</td></tr>
-      <tr><td>2022</td><td>California State bronze. AAU National qualifier, bronze at the national qualifiers.</td></tr>
-    </table>
-    <p>Every year also brought ten or more local gold medals. On Saturdays I help teach the four to six year olds: demonstrating forms, running drills, keeping them going.</p>
+  <h3 class="section-title">Speedcubing</h3>
+  <p style="margin-top:0">5 official WCA competitions. Also solves 4x4, 5x5, Square-1, Megaminx, Mirror Cube, 3BLD and many shapeshifting puzzles.</p>
+  <div class="scroll"><table>
+    <tr><th>Event</th><th>Single</th><th>Average</th></tr>
+    <tr><td>3x3</td><td>10.13</td><td>13.59</td></tr>
+    <tr><td>2x2</td><td>4.04</td><td>5.70</td></tr>
+    <tr><td>3x3 one-handed</td><td>29.61</td><td>35.55</td></tr>
+    <tr><td>Clock</td><td>16.56</td><td>20.05</td></tr>
+    <tr><td>Pyraminx</td><td>9.56</td><td>11.10</td></tr>
+    <tr><td>Skewb</td><td>18.50</td><td>25.36</td></tr>
+  </table></div>
+
+  <h3 class="section-title">Interests</h3>
+  <div class="pills" style="justify-content:flex-start">
+    <span class="pill">Aerospace</span><span class="pill">Rocketry</span><span class="pill">Drones</span><span class="pill">AI</span><span class="pill">Computer vision</span><span class="pill">Psychology</span><span class="pill">Engineering design</span><span class="pill">Entrepreneurship</span><span class="pill">E-bikes</span><span class="pill">Mountain biking</span><span class="pill">Speedcubing</span><span class="pill">Mathematics</span><span class="pill">Automation</span>
   </div>
-</section>
-
-<section>
-  <h2>Math</h2>
-  <ul class="plain" style="margin-top:0">
-    <li>Math Olympiad throughout middle school.</li>
-    <li>Noetic Learning Math Contest: honorable mention twice in 6th grade, honor roll in 7th.</li>
-    <li>School representative at the MathCounts chapter competition.</li>
-    <li>Top scorer in the school math club (ASMA), and consistent perfect scores on MathCounts Showcase.</li>
-    <li>Taking Geometry in 8th grade.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Cubing</h2>
-  <div>
-    <p style="margin-top:0">Five official WCA competitions. Can solve 2x2 through 5x5, Square-1, Megaminx, Pyraminx, Skewb, Clock, Mirror cube, one-handed and 3x3 blindfolded.</p>
-    <table>
-      <tr><th>Event</th><th>Single</th><th>Average</th></tr>
-      <tr><td>2x2</td><td>4.04</td><td>5.70</td></tr>
-      <tr><td>Pyraminx</td><td>9.56</td><td>11.10</td></tr>
-      <tr><td>3x3</td><td>10.13</td><td>13.59</td></tr>
-      <tr><td>Clock</td><td>16.56</td><td>20.05</td></tr>
-      <tr><td>Skewb</td><td>18.50</td><td>25.36</td></tr>
-      <tr><td>One-handed</td><td>29.61</td><td>35.55</td></tr>
-    </table>
-  </div>
-</section>
-
-<section>
-  <h2>Code and languages</h2>
-  <div>
-    <p style="margin-top:0">Python, Lua, Luau, MIT App Inventor. Learning Java.</p>
-    <p>English, Mandarin (conversational, around Chinese II), Hindi (strong listening, conversational speaking).</p>
-  </div>
-</section>
-
-
+</main>
 </div>
 </body>
 </html>
